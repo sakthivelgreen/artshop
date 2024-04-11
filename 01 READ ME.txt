@@ -1,0 +1,22 @@
+
+
+**ADMIN's LOGIN DETAIL**  (http://localhost/artshop/administrator)
+
+Username : Admin
+Password : Admin
+
+Username : Lakshmi
+Password : 123
+
+
+**USER LOGIN DETAILS**
+
+Username : pavi
+Password : 123456
+
+Username : navi
+Password : 123456
+
+Username : lakshmig
+Password : 123456
+
