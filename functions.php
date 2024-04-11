@@ -222,7 +222,6 @@ function closedbids()
 			echo "<div class='product_title'><a href='details2.php?id=" . $row['art_id'] . "'>" . $row['art_name']."</a></div>";
 			echo "<br></div>";
 			echo "</div>";
-			echo "</div>";
 		}
 	}
 }
