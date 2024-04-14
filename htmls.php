@@ -13,9 +13,7 @@
 			<script type="text/javascript" src="js/windowopen.js"></script>
 			<script type="text/javascript" src="js/boxOver.js"></script>
 			<script type="text/javascript" src=" administrator/js/jquery-1.4.2.min.js" ></script>	
-			<script type="text/javascript" src="../user/jquery.form.js"></script>
 			<link href="facebox1.2/src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
-			<link href="../css/example.css" media="screen" rel="stylesheet" type="text/css" />
 			<link rel="stylesheet" href="jquery-ui/development/themes/base/jquery.ui.all.css">
 			
 	
@@ -23,18 +21,14 @@
 			<script type="text/javascript">
 				jQuery(document).ready(function($) {
 					$(" a[rel*=facebox]" ).facebox({
-						loadingImage : " ../src/loading.gif" ,
-						closeImage   : " ../src/closelabel.png" 
+						loadingImage : " facebox1.2/src/loading.gif" ,
+						closeImage   : " facebox1.2/src/closelabel.png" 
 					})
 				})
 			</script>
 			<script type="text/javascript" src="js/jquery-latest.js"></script>
 			<script type="text/javascript" src="js/jquery.validate.js"></script>
-			<script type="text/javascript">   
-				$(document).ready(function(){
-				$("#contacts-form").validate();
-			  });
-			</script>
+			
 			<script language="JavaScript">
 			<!--
 			function isNumberKey(evt)

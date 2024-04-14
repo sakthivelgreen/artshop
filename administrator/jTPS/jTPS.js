@@ -24,8 +24,7 @@
                 var pT = $(this), page = page || 1, perPages = $(this).data('tableSettings').perPages, perPage = perPage || perPages[0],
                         rowCount = $('>tbody', this).find('tr').length;
 
-                // append jTPS class "stamp"
-                $(this).addClass('jTPS');
+                // append jTPS class "stamp
                 
                 // setup the fixed table-layout so that the animation doesn't bounce around - faux grid for table
                 if ( $(this).data('tableSettings').fixedLayout ) {

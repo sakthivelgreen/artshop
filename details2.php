@@ -1,8 +1,8 @@
 <?php
 session_start();
-require (__DIR__ . "/functions.php");
-require (__DIR__ . "/db.php");
-require (__DIR__ . "/htmls.php");
+require(__DIR__ . "/functions.php");
+require(__DIR__ . "/db.php");
+require(__DIR__ . "/htmls.php");
 
 headhtml();
 ?>
@@ -20,9 +20,9 @@ headhtml();
 			<li class="divider"></li>
 			<?php account(); ?>
 			<script type='text/javascript'>
-				jQuery(document).ready(function () {
+				jQuery(document).ready(function() {
 					jQuery('.nav3').hide();
-					jQuery('.nav4').click(function () {
+					jQuery('.nav4').click(function() {
 						jQuery('.nav3').toggle('fade');
 					});
 				});
@@ -40,12 +40,12 @@ headhtml();
 			categories();
 			// logform();
 			?>
-			
+
 	</div>
 	<!-- end of left content -->
 	<?php
 	$id = $_GET['id'];
-	($query = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM art_details WHERE art_id = '$id'")) || die (mysqli_error($GLOBALS["___mysqli_ston"]));
+	($query = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM art_details WHERE art_id = '$id'")) || die(mysqli_error($GLOBALS["___mysqli_ston"]));
 	$row = mysqli_fetch_array($query);
 	?>
 	<script>
@@ -65,17 +65,16 @@ headhtml();
 			<div class="top_prod_box_big"></div>
 			<div class="center_prod_box_big">
 				<div class="product_img_big">
-					<a href="#"
-						onclick="showImagePreview('administrator/images/products/<?php echo $row['art_image']; ?>')"
-						title="Click to Preview">
-						<img src='administrator/images/products/<?php echo $row['art_image']; ?>' width='169'
-							height='155' alt='' border='0' />
+					<a href="#" onclick="showImagePreview('administrator/images/products/<?php echo $row['art_image']; ?>')" title="Click to Preview">
+						<img src='administrator/images/products/<?php echo $row['art_image']; ?>' width='169' height='155' alt='' border='0' />
 					</a>
 					<br><br>
 					<div class='bid_border_box'>
-						<div class='details'><div class="product_title_big">
-							<?php echo $row['art_name']; ?>
-						</div></div>
+						<div class='details'>
+							<div class="product_title_big">
+								<?php echo $row['art_name']; ?>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div id="imagePreviewPopup">
@@ -91,28 +90,31 @@ headhtml();
 							Category: <span class="blue">
 								<?php
 								$categid = $row['category_id'];
-								($categ = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM art_categories WHERE categoryid = '$categid'")) || die (mysqli_error($GLOBALS["___mysqli_ston"]));
+								($categ = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM art_categories WHERE categoryid = '$categid'")) || die(mysqli_error($GLOBALS["___mysqli_ston"]));
 								$catega = mysqli_fetch_array($categ);
 								echo $catega['categoryname'];
 								?>
-							</span><br/><br/>
+							</span><br /><br />
 							Artist Name: <span class="blue">
-							<?php 
-								$ArtistID = $row['artist_id']; 
-								$query = mysqli_query($GLOBALS['___mysqli_ston'],"SELECT artist_name FROM artist WHERE artist_id = '$ArtistID' ");
+								<?php
+								$ArtistID = $row['artist_id'];
+								$query = mysqli_query($GLOBALS['___mysqli_ston'], "SELECT artist_name FROM artist WHERE artist_id = '$ArtistID' ");
 								$artistQ = mysqli_fetch_array($query);
 								echo $artistQ['artist_name'];
 								?>
-							</span><br/><br/>
-                            Sold to: <span class="blue">
-								<?php 
-                                $win=mysqli_query($GLOBALS["___mysqli_ston"],"SELECT * FROM winners WHERE art_id = '$id'");
-                                $row = mysqli_fetch_array($win);
-                                if(!empty($row)){
-                                echo $row['customer_name'];
-                            }else{
-                                echo "The product is not bid by anyone!";
-                            } ?>
+							</span><br /><br />
+							Sold to: <span class="blue">
+								<?php
+								$query2 = mysqli_query($GLOBALS['___mysqli_ston'],"SELECT * FROM winners WHERE art_id = '$id'");
+								$CUS = mysqli_fetch_array($query2);
+								$cusid = $CUS["customer_id"];
+								$win = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM customer WHERE customer_id = '$cusid'");
+								$row = mysqli_fetch_array($win);
+								if (empty($row)) {
+									echo "The product is not bid by anyone!";
+								} else {
+									echo "" . $row["customer_firstName"] . " " . $row["customer_lastName"];
+								} ?>
 							</span>
 
 						</div>

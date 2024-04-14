@@ -1,6 +1,4 @@
-@import "./css/jquery_ui_uniq.css";
-@import "./css/iphonecheckboxes.css";
-@import "./css/visualize.css";
+
 
 /* --- 1. CSS RESET --- */
 
@@ -40,7 +38,7 @@ fieldset hr {
 }
 
 h1 {
-	color::#333;
+	color:#333;
 	font-size:28px;
 	clear:both;
 }
@@ -156,17 +154,13 @@ h1 span {
 	color:#fff;
 }
 
-#menu ul li.current a {
-	/*padding-left:43px;*/
-}
+
 
 #menu ul li.current {
 	background:url('./assets/menu_current.png') top right no-repeat;
 }
 
-#menu ul li.current li a {
-	
-}
+
 
 #menu ul ul {
 	clear:both;
@@ -177,9 +171,7 @@ h1 span {
 	margin-bottom:3px;
 }
 
-#menu ul ul li {
 
-}
 
 #menu ul ul li, #menu ul ul li a {
 	background:none;
@@ -265,7 +257,6 @@ h1 span {
 	text-align: justify;
 	float: left;
 	margin-right: 15px;
-	*margin-top: 15px; /*IE8 fix*/
 	margin-bottom:0!important;
 	padding-top:12px;
 }
@@ -760,9 +751,7 @@ input[type="radio"], input[type="checkbox"] {
 .validate_success { color:#739F1D; }
 .validate_error { color:red; }
 
-fieldset p {
 
-}
 
 input[type="checkbox"] + label {
 	display: block;

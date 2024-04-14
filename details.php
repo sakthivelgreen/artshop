@@ -284,7 +284,7 @@ $duedate = "2024-03-18 00:00:00";
 							<?php echo '</span><br /><br />
 									<form method = "post" action="bidconfirm.php?id=' . $prodid . '" id="logins-form" class="logins-form">
 										<input type = "hidden" value="' . $highbid . '" name="high">
-										&nbsp&nbsp <strong>Enter Amount </strong><input type="text" id="amontbox" name="bidamount">
+										&nbsp&nbsp <strong>Enter Amount </strong><input type="text" id="amontbox" name="bidamount" required>
 										<input type="submit" value="Place Bid" name="submit">
 									</form>
 								&nbsp&nbsp <span class="blue"><strong>';

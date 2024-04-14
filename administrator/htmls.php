@@ -18,9 +18,7 @@ function headhtml(){
 <!--	<script type="text/javascript" src="./js/jquery.cleditor.min.js"></script> --><!-- wysiwyg editor -->
 
     <!-- Ativando o jQuery lightBox plugin -->
-    <script type="text/javascript" src="../user/jquery.form.js"></script>
 	<link href="../facebox1.2/src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="../css/example.css" media="screen" rel="stylesheet" type="text/css" />
 	 <script src="../facebox1.2/lib/jquery.js" type="text/javascript"></script>
 	  <script src="../facebox1.2/src/facebox.js" type="text/javascript"></script>
 	  <script type="text/javascript">

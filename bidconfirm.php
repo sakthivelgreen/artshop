@@ -11,7 +11,6 @@
 
 		<link rel="stylesheet" href="jquery-ui/development/themes/base/jquery.ui.all.css">
 		<script src="jquery-ui/development/jquery-1.5.1.js"></script>
-		<script src="jquery-ui/development/external/jquery.bgiframe-2.1.2.jss"></script>
 		<script src="jquery-ui/development/ui/jquery.ui.core.js"></script>
 		<script src="jquery-ui/development/ui/jquery.ui.widget.js"></script>
 		<script src="jquery-ui/development/ui/jquery.ui.mouse.js"></script>
