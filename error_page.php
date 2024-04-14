@@ -39,7 +39,7 @@
         <div class="error-description">
             <?php
             // Check for specific error conditions and display corresponding messages
-                echo "Somthing Went Wrong <a href='/artshop/home.php'>Click here to Goto HomePage</a>";
+                echo "Somthing Went Wrong <a href='/home.php'>Click here to Goto HomePage</a>";
             
             ?>
         </div>
