@@ -8,18 +8,7 @@ require_once (__DIR__ . "/db.php");
 <html>
 
 <body>
-    <script>
-        $(function () {
-            // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-            $("#dialog:ui-dialog").dialog("destroy");
-
-            $("#dialog-modal").dialog({
-                height: 140,
-                modal: true
-            });
-        });
-    </script>
-    <!-- // Call the updatestatus function -->
+     <!-- // Call the updatestatus function -->
     <?php updatestatus(); ?>
 </body>
 
