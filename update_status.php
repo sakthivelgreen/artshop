@@ -74,10 +74,10 @@ function updatestatus()
             mysqli_query($GLOBALS['___mysqli_ston'], "INSERT INTO winners (bid_id,customer_id,price,art_id,payment) 
 				VALUES ('$highbid_id','$highbid_customerID','$highbid','$art_id','pending')");
             mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE art_details SET bidding_status = 'closed' WHERE art_id = '$id'");
-            echo "Time Up!, The Bidding for this product is closed! <a href='/artshop/home.php'>Back to Home</a>";
+            echo "Time Up!, The Bidding for this product is closed! <a href='/home.php'>Back to Home</a>";
         } else {
             mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE art_details SET bidding_status = 'closed' WHERE art_id = '$id'");
-            echo "The Bidding for this product is closed! <a href='/artshop/home.php'>Back to Home</a>";
+            echo "The Bidding for this product is closed! <a href='/home.php'>Back to Home</a>";
         }
         exit;
 
