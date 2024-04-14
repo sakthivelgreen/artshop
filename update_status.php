@@ -76,6 +76,7 @@ function updatestatus()
 }
 
 // If the action parameter is not set or is invalid, redirect to an appropriate page
-header("Location: error_page.php");
+echo "The Bidding for this product is closed! <a href='/home.php'>Back to Home</a>";
+// header("Location: error_page.php");
 exit;
 ?>
